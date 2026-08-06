@@ -466,7 +466,8 @@ python backend/app.py
 If the server starts successfully, you should see output similar to:
 
 ```text
- * Running on http://127.0.0.1:5000
+ Signify Server Running
+ http://127.0.0.1:5000
 ```
 
 ---
