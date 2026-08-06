@@ -245,7 +245,8 @@ Signify/
 │   ├── model/
 │   │     └── signature_siamese_model1.keras
 │   ├── uploads/
-│   └── data/
+│   ├── data/
+│   └── requirements.txt
 │
 ├── frontend/
 │   ├── index.html
@@ -255,7 +256,6 @@ Signify/
 │         ├── img/
 │         └── demo/
 │
-├── requirements.txt
 └── README.md
 ```
 
