@@ -8,9 +8,9 @@
 ![Scikit--Learn](https://img.shields.io/badge/Scikit--Learn-1.8.0-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.10.0-11557C?style=for-the-badge)
 ![Protobuf](https://img.shields.io/badge/Protobuf-6.31.1-4285F4?style=for-the-badge)
-![OpenCV](https://img.shields.io/badge/OpenCV-4.12.0-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-3.1.2-000000?style=for-the-badge&logo=flask&logoColor=white)
-![Flask--CORS](https://img.shields.io/badge/Flask--CORS-6.0.1-000000?style=for-the-badge)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.13.0.92-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.1.3-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Flask--CORS](https://img.shields.io/badge/Flask--CORS-6.0.2-000000?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-Academic-blue?style=for-the-badge)
 
 ---
