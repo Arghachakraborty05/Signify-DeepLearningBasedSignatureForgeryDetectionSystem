@@ -546,7 +546,7 @@ This project was developed for **academic and educational purposes** as part of 
 
 📧 Email: argha.chakraborty9635@gmail.com
 
-💼 LinkedIn: *(Add your LinkedIn URL)*
+💼 LinkedIn: www.linkedin.com/in/argha-chakraborty-69b7a2282
 
 🐙 GitHub: https://github.com/Arghachakraborty05
 
