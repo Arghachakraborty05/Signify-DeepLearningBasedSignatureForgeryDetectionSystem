@@ -291,13 +291,79 @@ Signify/
 
 ---
 
+# 📋 System Requirements
+
+Before running this project, ensure the following software is installed:
+
+| Requirement  |    Version    |
+|--------------|---------------|
+|    Python    |  **3.13.12**  |
+|  TensorFlow  | **2.20.0-rc0**|
+|     Keras    |   **3.11.0**  |
+|     NumPy    |   **2.2.3**   |
+|    Pandas    |   **3.0.0**   |
+| Scikit-learn |   **1.8.0**   |
+|  Matplotlib  |  **3.10.0**   |
+|   Protobuf   |   **6.31.1**  |
+|    OpenCV    | **4.13.0.92** |
+|    Flask     |   **3.1.3**   |
+|  Flask-CORS  |   **6.0.2**   |
+
+All required Python packages are listed in **requirements.txt**.
+
+> **Note:** These are the versions used during the development and testing of this project. Using the same versions is recommended to ensure consistent behavior and avoid dependency compatibility issues.
+ 
+---
+
 # 🚀 Installation
 
-## Clone Repository
+## Prerequisites
+
+> **⚠️ This project was developed and tested with Python 3.13.12.**
+>
+> **For the best compatibility and to avoid dependency or version conflicts, it is strongly recommended to use Python 3.13.12.**
+
+### 1. Install Python 3.13.12
+
+Download and install **Python 3.13.12** from the official Python website:
+
+🔗 https://www.python.org/downloads/release/python-31312/
+
+After installation, verify that Python has been installed successfully.
+
+**Windows**
+
+```bash
+python --version
+```
+
+or
+
+```bash
+py --version
+```
+
+**Linux / macOS**
+
+```bash
+python3 --version
+```
+
+Expected output:
+
+```text
+Python 3.13.12
+```
+
+---
+
+## 2. Clone the Repository
 
 ```bash
 git clone https://github.com/Arghachakraborty05/Signify-DeepLearningBasedSignatureForgeryDetectionSystem.git
 ```
+
+Navigate to the project directory:
 
 ```bash
 cd Signify-DeepLearningBasedSignatureForgeryDetectionSystem
@@ -305,7 +371,83 @@ cd Signify-DeepLearningBasedSignatureForgeryDetectionSystem
 
 ---
 
-## Install Dependencies
+## 3. Create a Virtual Environment (Recommended)
+
+Creating a dedicated virtual environment helps isolate project dependencies and prevents conflicts with other Python projects.
+
+Choose **one** of the following methods.
+
+---
+
+### Option 1 — Using Python venv (Windows)
+
+Create the virtual environment using **Python 3.13**:
+
+```bash
+py -3.13 -m venv signature_env
+```
+
+Activate the virtual environment:
+
+```bash
+signature_env\Scripts\activate
+```
+
+---
+
+### Option 2 — Using Python venv (Linux / macOS)
+
+Create the virtual environment using **Python 3.13**:
+
+```bash
+python3.13 -m venv signature_env
+```
+
+Activate the virtual environment:
+
+```bash
+source signature_env/bin/activate
+```
+
+---
+
+### Option 3 — Using Conda (Recommended)
+
+Create a Conda environment with **Python 3.13.12**:
+
+```bash
+conda create -n signature_env python=3.13.12
+```
+
+Activate the environment:
+
+```bash
+conda activate signature_env
+```
+
+---
+
+## 4. Verify the Python Version
+
+After activating the virtual environment, verify that the correct Python interpreter is being used.
+
+```bash
+python --version
+```
+
+Expected output:
+
+```text
+Python 3.13.12
+```
+
+This confirms that your virtual environment is using the recommended Python version.
+
+---
+
+## 5. Install Project Dependencies
+
+Once the virtual environment is activated, install all required packages:
 
 ```bash
 pip install -r requirements.txt
@@ -313,17 +455,31 @@ pip install -r requirements.txt
 
 ---
 
-## Run Flask Server
+## 6. Run the Flask Backend
+
+Start the Flask application:
 
 ```bash
 python backend/app.py
 ```
 
-Open your browser
+If the server starts successfully, you should see output similar to:
+
+```text
+ * Running on http://127.0.0.1:5000
+```
+
+---
+
+## 7. Open the Application
+
+Open your web browser and navigate to:
 
 ```text
 http://127.0.0.1:5000
 ```
+
+The **Signify** web interface should now be running locally and ready for customer registration and signature verification.
 
 ---
 
