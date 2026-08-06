@@ -5,7 +5,8 @@ pandas==3.0.0
 scikit-learn==1.8.0
 matplotlib==3.10.0
 protobuf==6.31.1
-opencv-python
-flask
-flask-cors
-#Python 3.13 (3.13.12)
+opencv-python==4.13.0.92
+flask==3.1.3
+flask-cors==6.0.2
+
+# Python 3.13.12
