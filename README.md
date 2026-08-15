@@ -27,7 +27,7 @@ Users can register multiple genuine signatures, and the system automatically con
 
 # ✨ Features
 
-- 🔐 Secure customer signature registration
+- 🔐 Customer signature registration
 - ✍ Offline handwritten signature verification
 - 🧠 MobileNetV2-based Siamese Neural Network
 - 🚀 Transfer Learning for feature extraction
@@ -224,12 +224,14 @@ Users can register multiple genuine signatures, and the system automatically con
 
 # 📂 Dataset
 
-The model was trained on an offline handwritten signature dataset consisting of:
+The project uses an offline handwritten signature dataset containing:
 
 - **144 Individuals**
 - **4,277 Signature Images**
 - Genuine Signatures
 - Forged Signatures
+
+The reported evaluation was performed using **455 evaluation/test signature pairs from 51 individuals**.
 
 ---
 
@@ -250,7 +252,7 @@ Signify/
 │
 ├── frontend/
 │   ├── index.html
-│   └──assets/
+│   └── assets/
 │         ├── css/
 │         ├── js/
 │         ├── img/
@@ -496,7 +498,7 @@ The **Signify** web interface should now be running locally and ready for custom
 
 **Evaluation Dataset**
 
-- 455 unseen signature pairs
+- 455 evaluation/test signature pairs
 - 51 individuals
 
 ---
