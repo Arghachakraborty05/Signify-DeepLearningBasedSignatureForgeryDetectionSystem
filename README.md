@@ -231,7 +231,7 @@ The project uses an offline handwritten signature dataset containing:
 - Genuine Signatures
 - Forged Signatures
 
-The reported evaluation was performed using **455 evaluation/test signature pairs from 51 individuals**.
+The evaluation was performed on **455 evaluation/test signature pairs from 51 individuals**.
 
 ---
 
@@ -513,7 +513,7 @@ The **Signify** web interface should now be running locally and ready for custom
 - ✅ Generated discriminative deep feature embeddings for writer-independent offline signature verification
 - ✅ Designed an adaptive centroid-based verification algorithm using Euclidean distance
 - ✅ Implemented confidence score estimation for prediction reliability
-- ✅ Achieved **98.68% Accuracy**, **99.13% Precision**, and **0.9989 ROC-AUC**
+- ✅ Achieved **98.68% Accuracy**, **99.13% Precision**, and **0.9989 ROC-AUC** on the evaluation set
 - ✅ Built a lightweight architecture suitable for practical deployment
 
 ---
