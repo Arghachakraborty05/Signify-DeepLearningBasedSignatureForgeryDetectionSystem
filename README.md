@@ -63,13 +63,13 @@ Users can register multiple genuine signatures, and the system automatically con
 </p>
 
 ### ✔️ Signature Verification 
-#### Genuine ✅
+- #### Genuine ✅
 
 <p align="center">
 <img src="frontend/assets/demo/Signature Verification - Genuine.png" width="90%">
 </p>
 
-#### Forged ❌
+- #### Forged ❌
 
 <p align="center">
 <img src="frontend/assets/demo/Signature Verification - Forged.png" width="90%">
