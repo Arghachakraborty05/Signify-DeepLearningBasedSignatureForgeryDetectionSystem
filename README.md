@@ -52,27 +52,27 @@ Users can register multiple genuine signatures, and the system automatically con
 ### 🏠 Home Page
 
 <p align="center">
-<img src="assets/demo/Home Page.png" width="90%">
+<img src="frontend/assets/demo/Home Page.png" width="90%">
 </p>
 
 
 ### ➕ Signature Registration
 
 <p align="center">
-<img src="assets/demo/Signature Registration.png" width="90%">
+<img src="frontend/assets/demo/Signature Registration.png" width="90%">
 </p>
 
 ###  Signature Verification 
-## Genuine ✅
+#### Genuine ✅
 
 <p align="center">
-<img src="assets/demo/Signature Verification - Genuine.png" width="90%">
+<img src="frontend/assets/demo/Signature Verification - Genuine.png" width="90%">
 </p>
 
-## Forged ❌
+#### Forged ❌
 
 <p align="center">
-<img src="assets/demo/Signature Verification - Forged.png" width="90%">
+<img src="frontend/assets/demo/Signature Verification - Forged.png" width="90%">
 </p>
 
 > **Note:** This project contains a Flask backend and TensorFlow model, so it cannot be deployed using GitHub Pages.
