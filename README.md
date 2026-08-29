@@ -62,7 +62,7 @@ Users can register multiple genuine signatures, and the system automatically con
 <img src="frontend/assets/demo/Signature Registration.png" width="90%">
 </p>
 
-###  Signature Verification 
+### ✔️ Signature Verification 
 #### Genuine ✅
 
 <p align="center">
