@@ -5,9 +5,9 @@ import os
 import json
 import traceback
 import numpy as np
+import re
 
 from flask import Flask, request, jsonify, send_from_directory
-from flask_cors import CORS
 
 from preprocessing import preprocess_signature
 from loader import get_embedding
@@ -37,10 +37,9 @@ app = Flask(
     static_url_path=""
 )
 
-CORS(app)
 
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
-app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024
+app.config["MAX_CONTENT_LENGTH"] = 20 * 1024 * 1024
 
 
 # =====================================================
@@ -103,7 +102,9 @@ def load_customer_data(customer_id):
 
     return data
 
-
+def valid_customer_id(customer_id):
+    return re.fullmatch(r"[A-Za-z0-9_-]{1,50}", customer_id) is not None
+    
 # =====================================================
 # ROUTES
 # =====================================================
@@ -128,6 +129,12 @@ def add_customer():
 
         customer_name = request.form.get("customerName", "").strip()
         customer_id = request.form.get("customerId", "").strip()
+
+        if not valid_customer_id(customer_id):
+            return jsonify({
+                "success": False,
+                "error": "Customer ID may contain only letters, numbers, hyphens and underscores."
+            }), 400
 
         if not customer_name or not customer_id:
             return jsonify({"success": False, "error": "Customer name and ID required"}), 400
@@ -197,6 +204,12 @@ def verify_signature():
     try:
 
         customer_id = request.form.get("customerId", "").strip()
+
+        if not valid_customer_id(customer_id):
+            return jsonify({
+                "success": False,
+                "error": "Customer ID may contain only letters, numbers, hyphens and underscores."
+            }), 400
 
         if not customer_id:
             return jsonify({"success": False, "error": "Customer ID required"}), 400
