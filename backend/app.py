@@ -130,14 +130,14 @@ def add_customer():
         customer_name = request.form.get("customerName", "").strip()
         customer_id = request.form.get("customerId", "").strip()
 
+        if not customer_name or not customer_id:
+            return jsonify({"success": False, "error": "Customer name and ID required"}), 400
+
         if not valid_customer_id(customer_id):
             return jsonify({
                 "success": False,
                 "error": "Customer ID may contain only letters, numbers, hyphens and underscores."
             }), 400
-
-        if not customer_name or not customer_id:
-            return jsonify({"success": False, "error": "Customer name and ID required"}), 400
 
         if os.path.exists(get_customer_data_path(customer_id)):
             return jsonify({"success": False, "error": "Customer already exists"}), 400
@@ -205,14 +205,14 @@ def verify_signature():
 
         customer_id = request.form.get("customerId", "").strip()
 
+        if not customer_id:
+            return jsonify({"success": False, "error": "Customer ID required"}), 400
+
         if not valid_customer_id(customer_id):
             return jsonify({
                 "success": False,
                 "error": "Customer ID may contain only letters, numbers, hyphens and underscores."
-            }), 400
-
-        if not customer_id:
-            return jsonify({"success": False, "error": "Customer ID required"}), 400
+            }), 400    
 
         customer_data = load_customer_data(customer_id)
 
