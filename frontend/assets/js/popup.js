@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
             formData.append("signatures", file);
         });
 
-        fetch("http://127.0.0.1:5000/add-customer", {
+        fetch("/add-customer", {
             method: "POST",
             body: formData
         })
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .catch(error => {
                 console.error(error);
-                warningBox.innerText = "Server error. Make sure Flask backend is running.";
+                warningBox.innerText = "Unable to connect to the server. Please try again.";
             });
 
     });
@@ -406,7 +406,7 @@ document.addEventListener("verifyFormValid", function (event) {
     formData.append("customerId", customerId);
     formData.append("signature", file);
 
-    fetch("http://127.0.0.1:5000/verify-signature", {
+    fetch("/verify-signature", {
         method: "POST",
         body: formData
     })
@@ -441,7 +441,7 @@ document.addEventListener("verifyFormValid", function (event) {
         .catch(err => {
             console.error(err);
             document.getElementById("verifyResult").innerText =
-                "Server error. Is Flask running?";
+                "Unable to connect to the verification service. Please try again.";
         });
 
 });
