@@ -10,7 +10,7 @@ import re
 from flask import Flask, request, jsonify, send_from_directory
 
 from preprocessing import preprocess_signature
-from loader import get_embedding
+from loader import get_embedding, get_embeddings
 
 
 # =====================================================
@@ -150,16 +150,22 @@ def add_customer():
         customer_folder = os.path.join(UPLOAD_FOLDER, customer_id)
         os.makedirs(customer_folder, exist_ok=True)
 
-        embeddings = []
+        images = []
 
         for i, file in enumerate(files):
 
             if not allowed_file(file.filename):
-                return jsonify({"success": False, "error": f"Invalid file type: {file.filename}"}), 400
+                return jsonify({
+                    "success": False,
+                    "error": f"Invalid file type: {file.filename}"
+                }), 400
 
             ext = file.filename.rsplit(".", 1)[1].lower()
 
-            save_path = os.path.join(customer_folder, f"sig_{i+1}.{ext}")
+            save_path = os.path.join(
+                customer_folder,
+                f"sig_{i+1}.{ext}"
+            )
 
             file_bytes = file.read()
 
@@ -171,9 +177,14 @@ def add_customer():
                 from_bytes=True
             )
 
-            emb = get_embedding(normalized_img)
+            images.append(normalized_img)
 
-            embeddings.append(emb)
+
+        # -----------------------------------------------
+        # Generate embeddings in one batch
+        # -----------------------------------------------
+
+        embeddings = get_embeddings(images)
 
         save_customer_data(customer_id, customer_name, embeddings)
 
