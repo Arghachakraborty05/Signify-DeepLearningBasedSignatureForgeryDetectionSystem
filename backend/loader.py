@@ -54,17 +54,35 @@ print("Embedding model extracted")
 
 
 # ---------------------------------------------------
-# Get Embedding
+# Get Single Embedding
 # ---------------------------------------------------
 
 def get_embedding(image):
 
     image_batch = np.expand_dims(image, axis=0)
 
-    embedding = embedding_model.predict(image_batch, verbose=0)
+    embedding = embedding_model.predict(
+        image_batch,
+        verbose=0
+    )
 
     return embedding[0]
 
+
+# ---------------------------------------------------
+# Get Multiple Embeddings
+# ---------------------------------------------------
+
+def get_embeddings(images):
+
+    image_batch = np.stack(images, axis=0)
+
+    embeddings = embedding_model.predict(
+        image_batch,
+        verbose=0
+    )
+
+    return embeddings
 
 # ---------------------------------------------------
 # Euclidean Distance
